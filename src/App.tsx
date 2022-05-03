@@ -2,7 +2,10 @@ import Dropdown from "./Dropdown/DropdownContainer";
 
 export default function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{ height: "100vh", display: "grid", placeContent: "center" }}
+    >
       <Dropdown>
         <Dropdown.Trigger label="TEST LABEL" variant="default">
           Menu 2
