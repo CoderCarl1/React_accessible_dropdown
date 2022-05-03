@@ -28,7 +28,7 @@ Read more about how to make your own custom (and accessible) dropdown menu on th
 
 ## Installation
 
-This application is created wih Ruby on Rails. If you would like to setup this Application on your personal machine these are the steps required.
+This application is created wih React. If you would like to setup this Application on your personal machine these are the steps required.
 
 <details>
 <summary>Instructions</summary>
