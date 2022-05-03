@@ -11,7 +11,7 @@ import { DropdownContext } from "./utils/context";
 
 /**
  * @version 0.1.0
- * @author Carl Davidson -- *external link: [Github](https://github.com/CoderCarl1)*
+ * @author Carl Davidson -- *external link: [Github](https://github.com/CoderCarl1/React_accessible_dropdown)*
  * @component
  * @param children
  *

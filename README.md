@@ -1,27 +1,63 @@
 # Accessible Dropdown Menu
 
-[live example](https://dropdown-a11y.netlify.app/)
+[live Example - _external site_](https://dropdown-a11y.netlify.app/)
 
-## intro
+## Contents
 
-There are a lot of dropdowns that are not accesible to screen readers
+- [Intro](#intro)
+- [Installation](#installation)
+- [About](#about)
+- [Examples](#examples)
+- [Variants](#variants)
+- [functionality](#functionality)
+  - [Keyboard](#keyboard)
+- [todo](#todo)
 
-This can be due to:
+## Intro
 
-- not visible focus states
-- keyboard navigation
-- incorrect use of Aria
-- incorrect use of non semantic Elements
+There are a lot of dropdowns that are not accessible to screen readers
 
-The App is a compound component
-Each component can accept props, and a variant
+This can be due to any number of things but commonly will be:
 
-## Example
+- Incorrect use of Aria
+- Keyboard navigation controls that either are non-standard or trap the user.
+- Non-visible focus states
+- Use of non semantic Elements
+
+Read more about how to make your own custom (and accessible) dropdown menu on this [smashing magazine article - _external link_](https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/) by Heydon Pickering
+
+## Installation
+
+This application is created wih Ruby on Rails. If you would like to setup this Application on your personal machine these are the steps required.
+
+<details>
+<summary>Instructions</summary>
+
+- fork and clone the Repo
+- navigate into the Dropdown repo
+- npm install
+- npm run start will open the example component on port 3000: [localhost:3000 ](http://localhost:3000/) _external site_
+
+</details>
+
+## About
+
+The App is a compound component. This means that the component **must** be laid out in the order shown within the [example](#example).
+
+The dropdown menu is styled to dropdown but all other styling is up to you, the developer.
+
+Each component can accept props (classNames, functions, atttributes), and a variant (_*currently only default available*_).
+
+- Written in React & Typescript with Functional Components
+- State shared using Context
+- Functionality hidden from developer to make easy to implement
+
+## Examples
 
 <details>
 <summary> Example Code for menu</summary>
 
-```html
+```jsx
 <Dropdown>
   <Dropdown.Trigger label="TEST LABEL" variant="default">
     Menu
@@ -42,20 +78,26 @@ Each component can accept props, and a variant
 
 </details>
 
-### Keyboard functionality
+### Variants
+
+default: basic styling will be added to the component (colours / outlines etc.)
+
+## Functionality
+
+### Keyboards
 
 Each focusable child passed to Dropdown. Item can be programmatically focused using the keyboard once the menu has been opened.
 focusable children include:
 
-- a tags with a valid href
-- button
-- input
-- textarea
-- select
-- details
-- any element you have added a tabindex to that is not -1
+- `<a>` - must have a href
+- `<button>`
+- `input`
+- `<textarea>`
+- `<select>`
+- `<details>`
+- any other element you have added a tabindex to that is not -1
 
-_* All elements listed above will have a tabindex={-1} added to it *_
+> **note:** _All elements listed above will have a tabindex={-1} added to it_
 
 ## TODO
 
@@ -64,9 +106,3 @@ _* All elements listed above will have a tabindex={-1} added to it *_
 - Detect menu collision with edge of Window - move appropriately to remain in view
 - Add to NPM
 - Additional Variants
-
-## About
-
-- Written in React & Typescript with Functional Components
-- State shared using Context
-- Functionality hidden from developer to make easy to implement
