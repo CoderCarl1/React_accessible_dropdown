@@ -13,6 +13,8 @@ This can be due to:
 The App is a compound component
 Each component can accept props, and a variant
 
+## Example
+
 ```html
 <Dropdown>
   <Dropdown.Trigger label="TEST LABEL" variant="default">
@@ -35,3 +37,11 @@ Each component can accept props, and a variant
 ### Keyboard functionality
 
 Each child passed to Dropdown.Item can be focused using the keyboard once the menu has been opened
+
+## TODO
+
+- Tests
+- Add submenu functionality
+- Detect menu collision with edge of Window - move appropriately to remain in view
+- Add to NPM
+- Additional Variants
