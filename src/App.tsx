@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Dropdown from "./Dropdown/DropdownContainer";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dropdown>
+        <Dropdown.Trigger label="TEST LABEL" variant="default">
+          Menu 2
+        </Dropdown.Trigger>
+        <Dropdown.Content>
+          <Dropdown.Item>
+            <button>hello test test test</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <button>hello</button>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a href="/#">hello</a>
+          </Dropdown.Item>
+          {/* <Dropdown.Item>
+            <Dropdown>
+              <Dropdown.Trigger label="TEST LABEL" variant="default">
+                Menu 2
+              </Dropdown.Trigger>
+              <Dropdown.Content>
+                <Dropdown.Item>
+                  <button>hello</button>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <a href="/#">hello</a>
+                </Dropdown.Item>
+              </Dropdown.Content>
+            </Dropdown>
+          </Dropdown.Item> */}
+        </Dropdown.Content>
+      </Dropdown>
     </div>
   );
 }
-
-export default App;
