@@ -33,6 +33,7 @@ This can be due to any number of things but commonly will be:
 - [CSS only Dropdowns](https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/) - _*Stephanie Eckles*_ (_external link_)
 
 </details>
+
 ## Installation
 
 This application is created wih React. If you would like to setup this Application on your personal machine these are the steps required.
