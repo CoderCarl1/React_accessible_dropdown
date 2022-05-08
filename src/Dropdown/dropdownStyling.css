@@ -86,9 +86,13 @@
  }
 [data-dd-trigger][data-variant="default"]:hover,
 [data-dd-trigger]:not([class]):hover,
-[data-dd-trigger][class=""]:hover {
+[data-dd-trigger][class=""]:hover,
+[data-dd-trigger][data-variant="default"]:focus,
+[data-dd-trigger]:not([class]):focus,
+[data-dd-trigger][class=""]:focus {
   background-color: hsl(var(--dd-primary-200));
-  outline: 2px solid hsl(var(--dd-neutral-200));
+  background-color: pink;
+  outline: inset 2px solid hsl(var(--dd-neutral-200));
   outline-offset: 4px;
 }
 
@@ -177,6 +181,14 @@
 [data-dd-item][class=""] a:hover {
   background-color: hsl(var(--dd-primary-200), 50%);
   cursor: pointer;
+}
+
+[data-dd-item][data-variant="default"]:focus,
+[data-dd-item]:not([class]) button:focus,
+[data-dd-item]:not([class]) a:focus,
+[data-dd-item][class=""] button:focus,
+[data-dd-item][class=""] a:focus {
+  outline: inset 2px ridge;
 }
 
 [data-dd-item]:not([class]) button:active,

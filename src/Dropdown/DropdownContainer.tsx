@@ -27,7 +27,7 @@ import { DropdownContext } from "./utils/context";
  * ```
  */
 
-const Dropdown: DropdownType = ({ children, ...attributes }) => {
+const Dropdown: DropdownType = ({ children, ...props }) => {
   const { toggle: dropdownStatus, setToggleStatus: setDropdownStatus } =
     useToggle(false);
 
@@ -58,7 +58,7 @@ const Dropdown: DropdownType = ({ children, ...attributes }) => {
     <DropdownContext.Provider
       value={{ dropdownStatus, closeMenu, openMenu, triggerRef, optionsRef }}
     >
-      <div data-dd-wrapper className="" ref={navRef} {...attributes}>
+      <div data-dd-wrapper className="" ref={navRef} {...props}>
         {children}
       </div>
     </DropdownContext.Provider>

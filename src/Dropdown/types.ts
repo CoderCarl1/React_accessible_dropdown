@@ -35,7 +35,7 @@ export type variantTypes = "default";
 export type DDComponentProps = {
   children?: ReactNode;
   variant?: variantTypes;
-  attributes?: AttributePropType<Attribute>;
+  props?: AttributePropType<React.HTMLAttributes<HTMLElement>>;
 };
 export type DropdownProps = DDComponentProps;
 export type ContentProps = DDComponentProps;
